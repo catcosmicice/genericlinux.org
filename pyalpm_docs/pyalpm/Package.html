@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packages &#8212; pyalpm 0.9.2 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pyalpm" href="Pyalpm.html" />
+    <link rel="prev" title="Databases" href="Database.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="packages">
+<h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="Package">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">Package</span></code><a class="headerlink" href="#Package" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="Package.name">
+<code class="sig-name descname"><span class="pre">name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the package</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.builddate">
+<code class="sig-name descname"><span class="pre">builddate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Long</span> <span class="pre">long</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.builddate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date on which this package was built</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.installdate">
+<code class="sig-name descname"><span class="pre">installdate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Long</span> <span class="pre">Long</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.installdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date in which this package was installed (only in localdb)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.size">
+<code class="sig-name descname"><span class="pre">size</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Long</span> <span class="pre">Long</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of references to the packages in this database</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.isize">
+<code class="sig-name descname"><span class="pre">isize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Long</span> <span class="pre">Long</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.isize" title="Permalink to this definition">¶</a></dt>
+<dd><p>The installed size</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.files">
+<code class="sig-name descname"><span class="pre">files</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.files" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of files in this package</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.db">
+<code class="sig-name descname"><span class="pre">db</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.db" title="Permalink to this definition">¶</a></dt>
+<dd><p>A reference to the database this package belongs to</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.has_scriptlet">
+<code class="sig-name descname"><span class="pre">has_scriptlet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.has_scriptlet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this package has a scriptlet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.licenses">
+<code class="sig-name descname"><span class="pre">licenses</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.licenses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of licenses for this package.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.desc">
+<code class="sig-name descname"><span class="pre">desc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.desc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Package description.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.depends">
+<code class="sig-name descname"><span class="pre">depends</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.depends" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of dependencies for this package</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.optdepends">
+<code class="sig-name descname"><span class="pre">optdepends</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.optdepends" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the optional dependencies for this package</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.checkdepends">
+<code class="sig-name descname"><span class="pre">checkdepends</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.checkdepends" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the check dependencies for this package (syncdb only)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.makedepends">
+<code class="sig-name descname"><span class="pre">makedepends</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.makedepends" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the make dependencies for this package (syncdb only)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.replaces">
+<code class="sig-name descname"><span class="pre">replaces</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.replaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of packages this package replaces</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.provides">
+<code class="sig-name descname"><span class="pre">provides</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.provides" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of strings of what this package provides</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.conflicts">
+<code class="sig-name descname"><span class="pre">conflicts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.conflicts" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of packages this package conflicts with</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.backup">
+<code class="sig-name descname"><span class="pre">backup</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.backup" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of backup tuples (filename, md5sum)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.groups">
+<code class="sig-name descname"><span class="pre">groups</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>The groups this package belongs to</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.arch">
+<code class="sig-name descname"><span class="pre">arch</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.arch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CPU architecture for this package</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.packager">
+<code class="sig-name descname"><span class="pre">packager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.packager" title="Permalink to this definition">¶</a></dt>
+<dd><p>The packager for this package</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.md5sum">
+<code class="sig-name descname"><span class="pre">md5sum</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.md5sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>The package md5sum as hexadecimal digits</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.sha256sum">
+<code class="sig-name descname"><span class="pre">sha256sum</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.sha256sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>The package sha256sum as hexadecimal digits</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.base64_sig">
+<code class="sig-name descname"><span class="pre">base64_sig</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.base64_sig" title="Permalink to this definition">¶</a></dt>
+<dd><p>The package signature encoded as base64</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.filename">
+<code class="sig-name descname"><span class="pre">filename</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The package filename</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Package.url">
+<code class="sig-name descname"><span class="pre">url</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Package.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The package URL</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Package.compute_requiredby">
+<code class="sig-name descname"><span class="pre">compute_requiredby</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Package.compute_requiredby" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Computes a list of the packages this package is required by</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the packages who require this package</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Package.compute_optionalfor">
+<code class="sig-name descname"><span class="pre">compute_optionalfor</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Package.compute_optionalfor" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Computes a list of the packages optionally requiring this package</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the packages who optionally require this package</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyalpm</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pyalpm.html">Pyalpm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Handle.html">Handles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Database.html">Databases</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pyalpm.html">pyalpm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Transaction.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyalpm.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="pyalpm.html">Pyalpm</a><ul>
+      <li>Previous: <a href="Database.html" title="previous chapter">Databases</a></li>
+      <li>Next: <a href="Pyalpm.html" title="next chapter">pyalpm</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Dan McGee <dan@archlinux.org>, Imanol Celaya <ilcra1989@gmail.com>, Jelle van der Waa <jelle@vdwaa.nl>, Øyvind Heggstad <mrelendig@har-ikkje.net>, Rémy Oudompheng <remy@archlinux.org>, Tasos Latsas <tlatsas2000@gmail.com>, Xyne <xyne@archlinux.ca>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/pyalpm/Package.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

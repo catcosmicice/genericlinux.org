@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Databases &#8212; pyalpm 0.9.2 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Packages" href="Package.html" />
+    <link rel="prev" title="Handles" href="Handle.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="databases">
+<h1>Databases<a class="headerlink" href="#databases" title="Permalink to this headline">¶</a></h1>
+<p>A database object represents a collection of packages. A database can be
+accessed by means of a Handle object, and can be used to query for package
+information.</p>
+<dl class="py class">
+<dt id="Database">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">Database</span></code><a class="headerlink" href="#Database" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="Database.name">
+<code class="sig-name descname"><span class="pre">name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of this database (for example, “core”)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Database.servers">
+<code class="sig-name descname"><span class="pre">servers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.servers" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of servers from where this database was fetched</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Database.pkgcache">
+<code class="sig-name descname"><span class="pre">pkgcache</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.pkgcache" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of references to the packages in this database</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="Database.grpcache">
+<code class="sig-name descname"><span class="pre">grpcache</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.grpcache" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tuples of the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+   <span class="p">(</span> <span class="s1">&#39;GROUPNAME&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">package</span><span class="o">-</span><span class="nb">list</span><span class="p">]</span> <span class="p">),</span>
+   <span class="p">(</span> <span class="s1">&#39;GROUPNAME2&#39;</span><span class="p">,</span> <span class="p">[</span><span class="o">...</span><span class="p">]),</span>
+   <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Database.get_pkg">
+<code class="sig-name descname"><span class="pre">get_pkg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.get_pkg" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Retrieves a package instance with the name ‘name’</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the package (e.g., ‘coreutils’)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a reference to the Package object with the name ‘name’ or None
+if it doesn’t exist</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Database.update">
+<code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to update the sync database (i.e., alpm_db_update).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force</strong> (<em>bool</em>) – If the database should be updated even if it’s up-to-date</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the update was successful, or an error if that’s not
+the case.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Database.search">
+<code class="sig-name descname"><span class="pre">search</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search this database for a package with the name matching the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>str</em>) – a regexp representing the package searched for.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of package objects matching the query by name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Database.read_grp">
+<code class="sig-name descname"><span class="pre">read_grp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Database.read_grp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the list of packages that belong to the group by the name passed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the group (e.g., ‘base’)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of  <a class="reference internal" href="Package.html#Package" title="Package"><code class="xref py py-class docutils literal notranslate"><span class="pre">Package</span></code></a> objects that correspond to the packages that
+belong to that group or None if the group is not found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">pyalpm</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pyalpm.html">Pyalpm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Handle.html">Handles</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Package.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pyalpm.html">pyalpm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Transaction.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyalpm.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="pyalpm.html">Pyalpm</a><ul>
+      <li>Previous: <a href="Handle.html" title="previous chapter">Handles</a></li>
+      <li>Next: <a href="Package.html" title="next chapter">Packages</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Dan McGee <dan@archlinux.org>, Imanol Celaya <ilcra1989@gmail.com>, Jelle van der Waa <jelle@vdwaa.nl>, Øyvind Heggstad <mrelendig@har-ikkje.net>, Rémy Oudompheng <remy@archlinux.org>, Tasos Latsas <tlatsas2000@gmail.com>, Xyne <xyne@archlinux.ca>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/pyalpm/Database.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
