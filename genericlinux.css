@@ -33,7 +33,7 @@ a:active {
 .jumbotron {
 	color: white;
 	background-color: #4FA2F5;
-	background: url('/banner.png');
+	background: url('banner.png');
 	background-repeat: repeat;
     background-size: zoom;
 	padding: 20px;
