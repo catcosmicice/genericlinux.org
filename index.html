@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en-US">
 <head>
 	<title>Generic Linux</title>
 	<script src="/dyslexia.js"></script> <!--opendyslexic font toggle js-->
@@ -9,17 +9,37 @@
 	<meta content="Generic Linux" property="og:site_name">
 	<meta content="logo.png" property="og:image">
 	<link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+	<script>
+function dropDown() {
+  document.getElementById("dropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+	</script>
 </head>
 <body style="padding: 0px;">		
 	<div id="navbar" class="text-center">
 	<center>
-		<span class="clickable" onClick="window.location.href='/'">Generic Linux</span>
-		/ <a href="#">About</a>
-		/ <a href="#">Philosophy</a>
-		/ <a href="https://pub.genericlinux.org">Downloads</a>
-		/ <a href="https://status.genericlinux.org" rel="noreferrer" target="_blank">Status</a>
-		/ <a href="community">Community</a>
-                --- <a href="javascript:toggleDyslexia()">Toggle Dyslexic Font</a>
+		<div class="dropdown">
+		<span class="dropbtn" onClick="dropDown()">Generic Linux</span>
+			<div class="dropdown-content" id="dropdown">
+			<a href="https://pub.genericlinux.org">Downloads</a>
+			<a href="channels.html">Community</a>			
+			<a href="https://status.genericlinux.org" rel="noreferrer" target="_blank">Status</a>
+		</div></div>
+
+                <a class="@font-face {font-family: ubuntu;src: url('fonts/opendyslexic.otf');}" href="javascript:toggleDyslexia()">Toggle Dyslexic Font</a>
 	</center>
 	</div>
 	<div class="jumbotron">
