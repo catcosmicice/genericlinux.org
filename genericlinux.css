@@ -107,9 +107,10 @@ h1 {
   padding: 0px;
 }
 .pfp {
-  margin: 6px;
+  margin-right: 6px;
   height: 48px;
   width: 48px;
   border-radius: 100%;
   background: var(--lighter-blue);
+  border: 2px solid var(--brand-blue);
 }
