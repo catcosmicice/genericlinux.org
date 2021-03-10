@@ -1,13 +1,13 @@
 @font-face {
   font-family: ubuntu;
-  src: url("fonts/plexsans-reg.ttf");
+  src: url("/fonts/plexsans-reg.ttf");
 }
 /* Define some colors :) */
 :root {
   /* Blues. */
-  --brand-blue:#0277bd;
-  --darker-blue:#004c8c;
-  --lighter-blue:#58a5f0;
+  --brand-blue:red;
+  --darker-blue:maroon;
+  --lighter-blue:pink;
   /* Grays. */
   --brand-gray:#263238;
   --darker-gray:#000a12;
@@ -42,18 +42,18 @@ a:active {
   color: cyan;
 }
 .jumbotron {
-  color: black;
+  color: var(--brand-blue);
   background-color: var(--darker-blue);
-  background: url('banner.png');
-  background-repeat: repeat;
-  background-size: zoom;
+  background: url('./vibrib.jpg') 0px -150px; /* buhnuhnuhnAHNAHnuhnuh */
+  background-size: cover;
   padding: 20px;
   padding-left: 15%;
   padding-right: 15%;
 }
 .disclaimer {
-  color: white;
+  color: var(--brand-blue);
   background-color: var(--brand-blue);
+  background: url('//videotoaster.warsawpakt.xyz/cdn/uploads/teapot.png');
   padding: 10px;
   padding-bottom: 1px;
   padding-top: 15px;

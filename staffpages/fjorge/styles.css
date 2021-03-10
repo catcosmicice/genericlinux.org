@@ -1,13 +1,9 @@
-@font-face {
-  font-family: ubuntu;
-  src: url("fonts/plexsans-reg.ttf");
-}
 /* Define some colors :) */
 :root {
   /* Blues. */
-  --brand-blue:#0277bd;
-  --darker-blue:#004c8c;
-  --lighter-blue:#58a5f0;
+  --brand-blue:red;
+  --darker-blue:maroon;
+  --lighter-blue:pink;
   /* Grays. */
   --brand-gray:#263238;
   --darker-gray:#000a12;
@@ -42,10 +38,10 @@ a:active {
   color: cyan;
 }
 .jumbotron {
-  color: black;
+  color: var(--brand-blue);
   background-color: var(--darker-blue);
-  background: url('banner.png');
-  background-repeat: repeat;
+  background: url('./vibrib.jpg');
+  background-repeat: none;
   background-size: zoom;
   padding: 20px;
   padding-left: 15%;
@@ -85,7 +81,6 @@ body {
   background-color: var(--darker-gray);
   margin-top: 0px;
   margin: 0px;
-  font-family: ubuntu;
 }
 h1 {
   margin-bottom: 0px;
