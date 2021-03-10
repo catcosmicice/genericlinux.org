@@ -91,6 +91,7 @@ h1 {
   margin-bottom: 0px;
 }
 .staff tr td h2 {
+  margin: 0px;
   margin-bottom: 3px;
   color: var(--darker-gray);
   padding: 3px;
@@ -104,4 +105,11 @@ h1 {
   text-align: left;
   border: 2px solid var(--brand-blue);
   padding: 0px;
+}
+.pfp {
+  margin: 6px;
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  background: var(--lighter-blue);
 }

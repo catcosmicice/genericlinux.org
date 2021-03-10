@@ -92,3 +92,26 @@ h1 {
   margin-bottom: 0px;
   letter-spacing: -4px;
 }
+.staff tr td h2 {
+  margin: 0px;
+  margin-bottom: 3px;
+  color: var(--darker-gray);
+  padding: 3px;
+  background: var(--brand-blue);
+}
+.staff tr td p {
+  padding: 10px 5px 5px 10px;
+}
+.staff tr td {
+  vertical-align: top;
+  text-align: left;
+  border: 2px solid var(--brand-blue);
+  padding: 0px;
+}
+.pfp {
+  margin: 6px;
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  background: var(--lighter-blue);
+}
