@@ -9,37 +9,15 @@
 	<meta content="Generic Linux" property="og:site_name">
 	<meta content="logo.png" property="og:image">
 	<link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
-	<script>
-function dropDown() {
-  document.getElementById("dropdown").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-} 
-	</script>
 </head>
 <body style="padding: 0px;">		
 	<div id="navbar" class="text-center">
 	<center>
-		<div class="dropdown">
-		<span class="dropbtn" onClick="dropDown()">Generic Linux</span>
-			<div class="dropdown-content" id="dropdown">
-			<a href="https://pub.genericlinux.org">Downloads</a>
-			<a href="channels.html">Community</a>			
-			<a href="https://status.genericlinux.org" rel="noreferrer" target="_blank">Status</a>
-		</div></div>
-
-                <a class="@font-face {font-family: ubuntu;src: url('fonts/opendyslexic.otf');}" href="javascript:toggleDyslexia()">Toggle Dyslexic Font</a>
+		<span class="clickable" onClick="window.location.href = '/';">Generic Linux</span> /
+		<a href="https://pub.genericlinux.org">Downloads</a> /
+		<a href="channels.html">Channels</a> /			
+		<a href="https://status.genericlinux.org" rel="noreferrer" target="_blank">Status</a> ---
+        <a href="javascript:toggleDyslexia()">Toggle Dyslexic Font</a>
 	</center>
 	</div>
 	<div class="jumbotron">
@@ -64,30 +42,60 @@ window.onclick = function(event) {
 			<h1>The Guys&trade;</h1>
 			<p>They make Generic Linux.</p>
 		<hr>
-			<h2>thewarsawpakt</h2>
-			<p>Creator. Web hosting, lots and lots of flask code. Pro-gamer in the C Pro-gaming Language and Pogthon.</p>
-			<h2>videotoaster</h2>
-			<p>Designer of the god-awful variety.</p>
-			<h2>mugman</h2>
-			<p>Modified the website and experienced at Pogthon. Made <a href="https://github.com/Generic-Linux/twrl">frontend of Twirl</a>.</p>
-			<h2>bbaovanc</h2>
-			<p>Set up <a href="https://status.genericlinux.org">status.genericlinux.org</a>, Pogthon master, and a community moderator.</p>
-			<h2>Caitcat</h2>
-			<p>Graciously provided us with an LFS tarball. Also community mod.</p>
-			<h2>Caughtquick</h2>
-			<p>Recruiter. Effective, too. Code Reviews, Installer and Grub Setup</p>
-			<h2>Sophon</h2>
-			<p>Our second community moderator. The worlds least qualified teenage programmer. Expert in breaking things.</p>
-			<h2>Annie</h2>
-			<p>Server mom.</p>
-			<h2>Fjorge</h2>
-			<p>Community Mod</p>
-			<h2>Chastify</h2>
-			<p>Graphical Design and early beta tester</p>
-			<h2>Coltigo</h2>
-			<p>ISO and grub wizard, SystemD configuration</p>
-			<h2>coop</h2>
-			<p>Exists and helps</p>
+            <table style="display:block;" class="staff">
+             <tr>
+			  <td style="width:33%;">
+               <h2>thewarsawpakt</h2>
+               <p>Creator. Web hosting, lots and lots of flask code. Pro-gamer in the C Pro-gaming Language and Pogthon.</p>
+              </td>
+              <td style="width:33%;">
+               <h2>videotoaster</h2>
+			   <p>Designer of the god-awful variety.</p>
+              </td>
+              <td style="width:33%;">
+			   <h2>mugman</h2>
+			   <p>Modified the website and experienced at Pogthon. Made <a href="https://github.com/Generic-Linux/twrl">frontend of Twirl</a>.</p>
+              </td>
+             </tr>
+             <tr>
+              <td>
+               <h2>bbaovanc</h2>
+			   <p>Set up <a href="https://status.genericlinux.org">status.genericlinux.org</a>, Pogthon master, and a community moderator.</p>
+              </td>
+              <td>
+               <h2>Caitcat</h2>
+			   <p>LFS dealer, community mod.</p>
+              </td>
+			  <td>
+               <h2>CaughtQuick</h2>
+			   <p>Recruiter, programmer, GRUB/installer creator.</p>
+              </td>
+             </tr>
+             <tr>
+              <td>
+			   <h2>Sophon</h2>
+			   <p>Our second community moderator. The worlds least qualified teenage programmer. Expert in breaking things.</p>
+              </td>
+              <td>
+               <h2>Annie</h2>
+			   <p>Server mom.</p>
+              </td>
+              <td>
+			   <h2>Fjorge</h2>
+			   <p>Community Mod</p>
+              </td>
+             </tr>
+			 <tr>
+              <td>
+               <h2>Chastify</h2>
+			   <p>Beta tester.</p>
+              </td>
+              <td>
+			   <h2>Coltigo</h2>
+			   <p>ISO and grub wizard, SystemD configuration</p>
+             </td>
+            </tr>
+    	</table>
 	</div>
 	<hr>
 	<div class="content">
