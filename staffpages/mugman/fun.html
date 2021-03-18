@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<button onclick="history.back()">Previous Page</button> <button onclick="history.forward()">Next Page</button> <button onclick="location.reload()">Reload</button>
+<textarea value="Address" id="adgo" name="adgo"></textarea><button onclick="location = document.getElementById('adgo').value">Go...</button>
+<button onclick="alert(history.length);console.log(history.length + ' pages')">How much entries do you have in your history?</button>
+<button onclick="histMan()">Add or get my custom cookie!</button>
+<button onclick="keepMe();console.log('Warning on tab switch')">Warn you if you switch tabs?</button>
+<button onclick="remHistMan()">Delete my cookie ;(</button>
+<button onclick="scrRes()">What's your screen resolution?</button><br/>
+<script>
+function histMan() {
+    var x = localStorage.getItem("memory")
+    if (x != null){
+        alert("Your custom word is " + x)
+    }else {
+        localStorage.setItem("memory", prompt("Choose a custom word for this site to remember: "));
+    }
+}
+function remHistMan() {
+    localStorage.removeItem("memory");
+    alert("Done!")
+}
+function scrRes(){
+    alert("Your screen resolution is " + screen.width + "x"+ screen.height)
+}
+function keepMe(){
+document.addEventListener('visibilitychange', function(e) {
+    if (document.hidden === true){alert("I see you left. Well you're back now. To stop this alert, reload.")}
+});}
+
+if (window.console) console = { 
+    log: function(){
+        var output='',
+            console=document.getElementById('console');
+        for (var i=0;i<arguments.length;i++) {
+            output+=arguments[i]+' ';
+        }
+        console.innerText+=output+"\n";
+    }
+};
+
+//test
+var test=12345;
+console.log('test', 'xyz', test);
+</script><br/>
+Console:
+<div id="console"></div>
+<a href="hecc/reload.html">Yeet Link One</a>
+<a href="hecc">Yeet Link Two</a>
+</html>	
