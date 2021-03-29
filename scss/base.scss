@@ -1,0 +1,116 @@
+@font-face {
+    font-family: ubuntu;
+    src: url("fonts/plexsans-reg.ttf");
+}
+$brand-blue:#0277bd;
+$darker-blue:#004c8c;
+$lighter-blue:#58a5f0;
+$brand-gray:#263238;
+$darker-gray:#000a12;
+$lighter-gray:#4f5b62;
+
+#navbar {
+    background-color: $darker-blue;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    padding-top: 15px;
+}
+a {
+    color: $lighter-blue;
+    &:hover {
+        color: white;
+    }
+    &:active {
+        color: $brand-blue;
+    }
+}
+#topbluetext {
+    color: #000000;
+}
+hr {
+    border-color: $brand-blue;
+}
+.clickable {
+    cursor: pointer;
+    &:active {
+        color: cyan;
+    }
+}
+.clickable
+.jumbotron {
+    color: black;
+    background-color: $darker-blue;
+    background: url('assets/banner.png');
+    background-repeat: repeat;
+    background-size: zoom;
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.disclaimer {
+    color: white;
+    background-color: $brand-blue;
+    padding: 10px;
+    padding-bottom: 1px;
+    padding-top: 15px;
+    a {
+    color: $lighter-blue;
+        &:hover {
+            color: white;
+        }
+        &:active {
+            color: $brand-blue;
+        }
+    }
+}
+.content {
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: block;
+}
+.alert {
+    background-color: $darker-blue;
+    color: white;
+    padding: 7.5px;
+    padding-top: 10px;
+    border-radius: 6px;
+}
+body {
+    color: white;
+    background-color: $darker-gray;
+    margin-top: 0px;
+    margin: 0px;
+    font-family: ubuntu;
+}
+h1 {
+    margin-bottom: 0px;
+}
+.staff tr td {
+    vertical-align: top;
+    text-align: left;
+    border: 2px solid $brand-blue;
+    padding: 0px;
+    h2 {
+        margin: 0px;
+        margin-bottom: 3px;
+        color: $darker-gray;
+        padding: 3px;
+        background: $brand-blue;
+    }
+    p {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+.pfp {
+    margin-right: 6px;
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    background: $lighter-blue;
+    border: 2px solid $brand-blue;
+}
