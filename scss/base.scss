@@ -1,6 +1,6 @@
 @font-face {
     font-family: ubuntu;
-    src: url("fonts/plexsans-reg.ttf");
+    src: url("/fonts/plexsans-reg.ttf");
 }
 $brand-blue:#0277bd;
 $darker-blue:#004c8c;
@@ -41,7 +41,7 @@ hr {
 .jumbotron {
     color: black;
     background-color: $darker-blue;
-    background: url('assets/banner.png');
+    background: url('/assets/banner.png');
     background-repeat: repeat;
     background-size: zoom;
     padding: 20px;
