@@ -35,7 +35,7 @@ hr {
   color: cyan;
 }
 
-.clickable .jumbotron {
+.jumbotron {
   color: black;
   background-color: #004c8c;
   background: url("/assets/banner.png");
