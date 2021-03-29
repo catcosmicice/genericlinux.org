@@ -1,0 +1,11 @@
+# Hello people browsing through our robots.txt file.
+# How about...
+
+Disallow: /assets/
+Disallow: 404.html
+Disallow: /backups/
+Disallow: /fonts/
+Disallow: /js/
+Disallow: /pfps/
+Disallow: README.md
+Disallow: /scss/
