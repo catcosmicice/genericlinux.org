@@ -1,7 +1,7 @@
 // Switch between brand Plex and OpenDyslexic
 window.onload = function() {
   if (document.cookie.includes("font=DYSLEXIC")) {
-    document.getElementById("css").href = "/_src/scss/dyslexia.css";
+    document.getElementById("css").href = "/src/scss/dyslexia.css";
   }
 }
 function toggleDyslexia(){
