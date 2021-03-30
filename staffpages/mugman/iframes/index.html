@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<script>
+function frameNav(){
+	var val = document.getElementById("text").value;
+	document.getElementById("ifr").src = val;
+}
+</script>
+<style>
+.boi {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.boi iframe {
+   border: 0;
+   height: 70%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 90%;
+}
+</style>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>
+$(function () {
+    $(".resizable").resizable({
+        animate: true,
+        animateEasing: 'swing',
+        animateDuration: 500
+    });
+});
+</script>
+</HEAD>
+<BODY>
+<TEXTAREA id="text" autofocus>https://</textarea><button onclick="frameNav();">Go</button>
+<br/><br/>
+<div class="boi">
+<iframe id="ifr" class="res" src="" style="resize: both;overflow: auto" referrerpolicy="no-referrer"></iframe>
+</div>
+</body>
+</html>

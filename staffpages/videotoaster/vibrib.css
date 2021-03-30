@@ -1,0 +1,119 @@
+@font-face {
+  font-family: ubuntu;
+  src: url("/fonts/plexsans-reg.ttf");
+}
+/* Define some colors :) */
+:root {
+  /* Blues. */
+  --brand-blue:red;
+  --darker-blue:maroon;
+  --lighter-blue:pink;
+  /* Grays. */
+  --brand-gray:#263238;
+  --darker-gray:#000a12;
+  --lighter-gray:#4f5b62;
+}
+#navbar {
+  background-color: var(--darker-blue);
+  color: white;
+  margin: 0px;
+  padding: 10px;
+  padding-top: 15px;
+}
+a {
+  color: var(--lighter-blue);
+}
+#topbluetext {
+  color: #000000;
+} /* what? */
+hr {
+  border-color: var(--brand-blue);
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: var(--brand-blue);
+}
+.clickable {
+  cursor: pointer;
+}
+.clickable:active {
+  color: cyan;
+}
+.jumbotron {
+  color: var(--brand-blue);
+  background-color: var(--darker-blue);
+  background: url('./vibrib.jpg') 0px -150px; /* buhnuhnuhnAHNAHnuhnuh */
+  background-size: cover;
+  padding: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.disclaimer {
+  color: var(--brand-blue);
+  background-color: var(--brand-blue);
+  background: url('//videotoaster.warsawpakt.xyz/cdn/uploads/teapot.png');
+  padding: 10px;
+  padding-bottom: 1px;
+  padding-top: 15px;
+}
+.disclaimer a {
+  color: var(--lighter-blue);
+}
+.disclaimer a:hover {
+  color: white;
+}
+.disclaimer a:active {
+  color: var(--brand-blue);
+}
+.content {
+  padding: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: block;
+}
+.alert {
+  background-color: var(--darker-blue);
+  color: white;
+  padding: 7.5px;
+  padding-top: 10px;
+  border-radius: 6px;
+}
+body {
+  color: white;
+  background-color: var(--darker-gray);
+  margin-top: 0px;
+  margin: 0px;
+  font-family: ubuntu;
+}
+h1 {
+  margin-bottom: 0px;
+}
+.staff tr td h2 {
+  margin: 0px;
+  margin-bottom: 3px;
+  color: var(--darker-gray);
+  padding: 3px;
+  background: var(--brand-blue);
+}
+.staff tr td p {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.staff tr td {
+  vertical-align: top;
+  text-align: left;
+  border: 2px solid var(--brand-blue);
+  padding: 0px;
+}
+.pfp {
+  margin-right: 6px;
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  background: var(--lighter-blue);
+  border: 2px solid var(--brand-blue);
+}

@@ -1,8 +1,7 @@
 @font-face {
     font-family: ubuntu;
-    src: url("/_assets/fonts/plexsans-reg.ttf");
+    src: url("/fonts/plexsans-reg.ttf");
 }
-// Color Variables
 $brand-blue:#0277bd;
 $darker-blue:#004c8c;
 $lighter-blue:#58a5f0;
@@ -10,7 +9,13 @@ $brand-gray:#263238;
 $darker-gray:#000a12;
 $lighter-gray:#4f5b62;
 
-// Classes, IDs and Tags.
+#navbar {
+    background-color: $darker-blue;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    padding-top: 15px;
+}
 a {
     color: $lighter-blue;
     &:hover {
@@ -20,32 +25,12 @@ a {
         color: $brand-blue;
     }
 }
-hr {
-    border-color: $brand-blue;
-}
-body {
-    color: white;
-    background-color: $darker-gray;
-    margin-top: 0px;
-    margin: 0px;
-    font-family: ubuntu;
-}
-h1 {
-    margin-bottom: 0px;
-}
-
-#navbar {
-    background-color: $darker-blue;
-    color: white;
-    margin: 0px;
-    padding: 10px;
-    padding-top: 15px;
-}
-
 #topbluetext {
     color: #000000;
 }
-
+hr {
+    border-color: $brand-blue;
+}
 .clickable {
     cursor: pointer;
     &:active {
@@ -56,7 +41,7 @@ h1 {
 .jumbotron {
     color: black;
     background-color: $darker-blue;
-    background: url('/_assets/imgs/banner.png');
+    background: url('/assets/banner.png');
     background-repeat: repeat;
     background-size: zoom;
     padding: 20px;
@@ -91,6 +76,16 @@ h1 {
     padding: 7.5px;
     padding-top: 10px;
     border-radius: 6px;
+}
+body {
+    color: white;
+    background-color: $darker-gray;
+    margin-top: 0px;
+    margin: 0px;
+    font-family: ubuntu;
+}
+h1 {
+    margin-bottom: 0px;
 }
 .staff tr td {
     vertical-align: top;
