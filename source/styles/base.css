@@ -116,3 +116,6 @@ body {
 	background: #58a5f0;
 	border: 2px solid #0277bd;
 }
+h1 {
+    margin-left: -20px;
+}
