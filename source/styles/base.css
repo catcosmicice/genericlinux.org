@@ -19,7 +19,7 @@ a:active {
 	color: var(--brand-blue);
 }
 hr {
-	border-color: var(var(--brand-blue));
+	border-color: var(--brand-blue);
 }
 body {
 	margin: 0px;
