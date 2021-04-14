@@ -1,4 +1,10 @@
-@import url("https://use.typekit.net/qxj0bdt.css");
+@font-face {
+    font-family: ubuntu;
+    src: url("/source/fonts/plexsans-reg.ttf");
+    font-display: swap;
+}
+
+
 :root {
     --brand-blue: #0277bd;
     --darker-blue: #004c8c;
@@ -24,7 +30,7 @@ body {
     margin: 0px;
     color: white;
     background-color: var(--background-blue);
-    font-family: ibm-plex-sans;
+    font-family: ubuntu;
 }
 #topnav {
     background-color: var(--darker-blue);
