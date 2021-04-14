@@ -12,7 +12,7 @@ jobs:
           node-version: 12.x
       - name: Install Lighthosuse
         run: |
-          npm install lighthouse
+          npm install lighthouse -g || sudo npm install -g lighthouse
       - name: run Lighthouse CI
         run: |
           lighthouse --output json https://genericlinux.org
