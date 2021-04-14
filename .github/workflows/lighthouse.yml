@@ -10,11 +10,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: npm install, build
+      - name: Install Lighthosuse
         run: |
-          npm install
-          npm run build
+          npm install lighthouse
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.7.x
-          lhci autorun
+          lighthouse --output json https://genericlinux.org
