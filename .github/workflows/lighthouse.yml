@@ -15,4 +15,4 @@ jobs:
           npm install lighthouse -g || sudo npm install -g lighthouse
       - name: run Lighthouse CI
         run: |
-          lighthouse --output json https://genericlinux.org
+          lighthouse https://genericlinux.org --output json
